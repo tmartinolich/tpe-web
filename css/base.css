@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+h2, h3 {
+    line-height: 1;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+}
+
+p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+}
+
+.contenido-nav, .contenido-articulos {
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+.contenido-intro,
+.contenido-grabacion,
+.contenido-produccion,
+.contenido-monitorizacion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+.estado-activo {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header {
+    background-color: black;
+    padding-bottom: 1rem;
+}
+
+.contenido-nav li {
+    padding: 0.2rem 1rem;
+}
+
+.contenido-intro, .contenido-historico {
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.contenido-intro {
+    background-image: linear-gradient(to bottom, black 0%, transparent 100%), url(../img/home-studio-2.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-articulos {
+    border-radius: 24px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    margin-top:-1.5rem;
+    position: relative;
+    z-index: 2;
+ }
+
+.solo-lectura {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.contenido-grabacion{
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+    background-image: url(../img/microphone.webp);
+    padding: 1rem;
+}
+
+.contenido-produccion {
+    background-image: url(../img/daw.webp);
+    padding: 1rem;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    margin-top: -5%;
+}
+
+.contenido-monitorizacion {
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    margin-top: -5%;
+    background-image: url(../img/hearphones-monitoring.webp);
+    padding: 1rem;
+}
+
+.contenido-grabacion,
+.contenido-produccion,
+.contenido-monitorizacion {
+    background-size: 100% auto;
+    transition: background-size 0.4s ease-out;
+}
+
+.contenido-grabacion:hover ,
+.contenido-produccion:hover ,
+.contenido-monitorizacion:hover {
+    background-size: 115% auto;
+
+}
+
+.contenido-grabacion span,
+.contenido-produccion span,
+.contenido-monitorizacion span {
+    display: block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+.contenido-historico {
+    background-image: linear-gradient(to top, black 0%, transparent 100%), url(../img/studio-music.webp);
+    background-size: cover;
+    background-position: center;
+    margin-top:-1.5rem;
+}
+
+.contenido-historico h2 {
+    margin-top: 1.5rem;
+}
+
+.articulo-detalles {
+    
+    background-image: linear-gradient(to bottom, black 0%, transparent 100%), url(../img/home-studio-2.webp);
+    background-size: cover;
+    background-position: center;
+    padding:1rem;
+    border-radius: 24px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+}
+
+.articulo-detalles p {
+    padding-top: 1rem;
+}
+
+.imagen-ejemplo {
+    padding: 0rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 21 / 9;
+    margin: auto;
+    border-radius: 24px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+}
+
+footer {
+    background-color: black;
+    padding:2rem;
+}
+
+footer a {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
