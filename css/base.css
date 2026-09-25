@@ -1,20 +1,115 @@
 * {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 0rem;
+    padding-bottom: 2rem;
+    margin: 0.5rem auto 0;
+}
+
+header > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+h1 {
+    line-height: 5rem;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav li {
+    padding: 0.2rem 1rem;
+}
+
+nav a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: normal;
+    transition: font-weight 0.1s ease;
     text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+nav a:active,
+nav a:hover,
+nav a:focus {
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+section,
+article {
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 img {
-    max-width: 100%;
     display: block;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 21 / 9;
 }
 
 a {
@@ -22,36 +117,36 @@ a {
     color: inherit;
 }
 
-ul {
-    list-style: none;
+footer {
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 2rem 0;
+    margin: 0;
+    width: 100%;
 }
 
-h1 {
-    font-size: 2rem;
-    padding: 1rem;
+footer a {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
-h2, h3 {
-    line-height: 1;
-    font-size: 1.5rem;
-    padding: 1rem 0.5rem;
+footer p {
+    margin: 0;
+    padding: 0 1rem;
 }
 
-p {
-        line-height: 1.6;
-        margin-bottom: 1rem;
+.estado-activo {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-.contenido-nav, .contenido-articulos {
-    display: flex;
-    flex-direction: column;
-}
-
-header,
-.contenido-intro,
+.contenido-principal,
+.contenido-articulos,
 .contenido-grabacion,
 .contenido-produccion,
-.contenido-monitorizacion {
+.contenido-monitorizacion,
+.contenido-adicional {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -59,144 +154,72 @@ header,
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
- }
-
-.estado-activo {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-header {
-    background-color: black;
-    padding-bottom: 1rem;
-}
-
-.contenido-nav li {
-    padding: 0.2rem 1rem;
-}
-
-.contenido-intro, .contenido-historico {
     background-size: cover;
     position: relative;
+}
+
+.contenido-principal {
     z-index: 1;
-    padding: 1rem;
-    padding-bottom: 2rem;
-}
-
-.contenido-intro {
     background-image: linear-gradient(to bottom, black 0%, transparent 100%), url(../img/home-studio-2.webp);
-    background-size: cover;
-    background-position: center;
+    padding: 1rem 1rem 2rem;
 }
 
-.contenido-articulos {
+.estilo-borde {
     border-radius: 24px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     overflow: hidden;
-    margin-top:-1.5rem;
-    position: relative;
-    z-index: 2;
- }
+}
 
-.solo-lectura {
-    position: absolute;
-    width: 0px;
-    height: 0px;
+.contenido-articulos {
+    margin-top: -1.5rem;
+    z-index: 2;
+    border-radius: 24px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     overflow: hidden;
 }
 
-.contenido-grabacion{
-    aspect-ratio: 1 / 1;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
-    background-image: url(../img/microphone.webp);
-    padding: 1rem;
-}
-
-.contenido-produccion {
-    background-image: url(../img/daw.webp);
-    padding: 1rem;
-    aspect-ratio: 1 / 1;
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-    margin-top: -5%;
-}
-
-.contenido-monitorizacion {
-    aspect-ratio: 1 / 1;
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
-    margin-top: -5%;
-    background-image: url(../img/hearphones-monitoring.webp);
-    padding: 1rem;
-}
-
-.contenido-grabacion,
-.contenido-produccion,
-.contenido-monitorizacion {
-    background-size: 100% auto;
-    transition: background-size 0.4s ease-out;
-}
-
-.contenido-grabacion:hover ,
-.contenido-produccion:hover ,
-.contenido-monitorizacion:hover {
-    background-size: 115% auto;
-
-}
-
-.contenido-grabacion span,
-.contenido-produccion span,
-.contenido-monitorizacion span {
+.contenido-articulos span {
     display: block;
     margin-top: 2rem;
     font-size: 0.8rem;
 }
 
-.contenido-historico {
+.contenido-grabacion,
+.contenido-produccion,
+.contenido-monitorizacion {
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+    background-size: 100% auto;
+    transition: background-size 0.3s ease-out;
+}
+
+.contenido-grabacion:hover,
+.contenido-produccion:hover,
+.contenido-monitorizacion:hover {
+    background-size: 110% auto;
+}
+
+.contenido-grabacion {
+    background-image: url(../img/microphone.webp);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+}
+
+.contenido-produccion {
+    background-image: url(../img/daw.webp);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    margin-top: -5%;
+}
+
+.contenido-monitorizacion {
+    background-image: url(../img/hearphones-monitoring.webp);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    margin-top: -5%;
+}
+
+.contenido-adicional {
     background-image: linear-gradient(to top, black 0%, transparent 100%), url(../img/studio-music.webp);
-    background-size: cover;
-    background-position: center;
-    margin-top:-1.5rem;
-}
-
-.contenido-historico h2 {
-    margin-top: 1.5rem;
-}
-
-.articulo-detalles {
-    
-    background-image: linear-gradient(to bottom, black 0%, transparent 100%), url(../img/home-studio-2.webp);
-    background-size: cover;
-    background-position: center;
-    padding:1rem;
-    border-radius: 24px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    overflow: hidden;
-}
-
-.articulo-detalles p {
-    padding-top: 1rem;
-}
-
-.imagen-ejemplo {
-    padding: 0rem;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 21 / 9;
-    margin: auto;
-    border-radius: 24px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    overflow: hidden;
-}
-
-footer {
-    background-color: black;
-    padding:2rem;
-}
-
-footer a {
-    display: inline-block;
-    margin-bottom: 1rem;
+    margin-top: -1.5rem;
+    padding-top: 3rem;
 }
