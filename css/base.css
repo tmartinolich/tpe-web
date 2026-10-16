@@ -16,21 +16,21 @@ header {
     background-color: #000000;
     color: #FFFFFF;
     width: 100%;
-    padding: 0rem;
-    padding-bottom: 2rem;
-    margin: 0.5rem auto 0;
+    margin: 1.5rem 0;
 }
 
 header > div {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 h1 {
+    grid-column: 2;
+    text-align: center;
     line-height: 5rem;
     font-size: 2rem;
     padding: 0;
@@ -38,9 +38,35 @@ h1 {
 }
 
 nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    z-index: 3;
+    top: 2rem;
+    bottom: 2rem;
+    right: 0;
+    border-left: 1px solid white;
+    border-radius: 30px;
+}
+
+nav.nav-open { /*nav-open es una clase de nav*/
+    display:flex;
+}
+
+button.hamburger-menu {
+    grid-column: 3;
+    justify-self: end;
+    display: block;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 nav ul {
@@ -53,19 +79,19 @@ nav ul {
 }
 
 nav li {
-    padding: 0.2rem 1rem;
+    padding: 2rem;
 }
 
 nav a {
     display: block;
-    padding: 0;
+    padding: 0; 
     margin: 0;
     color: #FFFFFF;
     text-decoration: none;
     font-weight: normal;
-    transition: font-weight 0.1s ease;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    font-size: 1.3rem;
 }
 
 nav a:active,
@@ -137,8 +163,8 @@ footer p {
 }
 
 .estado-activo {
+    font-size: 1.7rem;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .contenido-principal,
