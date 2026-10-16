@@ -54,6 +54,10 @@ nav {
     border-radius: 30px 0 0 30px;
 }
 
+body.bloqueo-menu {
+    overflow: hidden;
+}
+
 nav.nav-open { /*nav-open es una clase de nav*/
     display:flex;
     animation: abrir-nav 0.15s ease-out;
