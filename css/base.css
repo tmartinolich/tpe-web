@@ -56,6 +56,30 @@ nav {
 
 nav.nav-open { /*nav-open es una clase de nav*/
     display:flex;
+    animation: abrir-nav 0.15s ease-out;
+}
+
+@keyframes abrir-nav {
+    from {
+        opacity: 0;
+        transform: translateX(16px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+nav.nav-close {
+    display:flex;
+    animation: cerrar-nav 0.15s ease-out;
+}
+
+@keyframes cerrar-nav {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
 }
 
 button.hamburger-menu {
@@ -67,6 +91,7 @@ button.hamburger-menu {
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 4;
 }
 
 nav ul {
