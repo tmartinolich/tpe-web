@@ -44,4 +44,15 @@ document.addEventListener( 'DOMContentLoaded' , () => {
     mainNav.classList.remove('nav-close');
   }
   });
-} ) ;
+
+  // Ajusta el menú al cambiar el tamaño de la ventana (para pantallas grandes)
+  window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1250) {
+    mainNav.classList.remove('nav-open', 'nav-close');
+    document.body.classList.remove('bloqueo-menu');
+    hamburgerButton.setAttribute('aria-expanded', 'false');
+    hamburgerButton.setAttribute('aria-label', 'Abrir menú de navegación');
+    hamburgerButton.innerHTML = '&#9776;';
+  }
+});
+});
