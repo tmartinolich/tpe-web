@@ -247,7 +247,7 @@ footer p {
     padding: 1rem;
     background-size: 100% auto;
     transition: background-size 0.3s ease-out;
-    max-height: 550px;
+    max-height: 430px;
 }
 
 .contenido-grabacion:hover,
