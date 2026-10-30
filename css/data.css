@@ -13,6 +13,10 @@ table {
     backdrop-filter: blur(20px);
 }
 
+.tabla-scroll {
+  overflow-x: auto;
+}
+
 th, td {
   padding: 1rem;
   text-align: center;
@@ -161,6 +165,7 @@ form button:hover {
 }
 
 .modal-content h3 {
+  font-size: 1rem;
   color: white;
   margin-bottom: 1rem;
 }
@@ -172,7 +177,7 @@ form button:hover {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 0.5rem;
+    margin: 0.5rem 0.5rem;
 }
 
 .modal-buttons button.confirm-btn {
@@ -218,7 +223,9 @@ form button:hover {
         grid-template-columns: 1fr 3fr;
     }
     section {
-    margin: 0rem; 
-}
-    
+      margin: 0rem; 
+    }
+    .tabla-scroll table {
+    min-width: 650px;
+  }
 }
