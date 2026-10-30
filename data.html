@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Home Studio</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="css/data.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1><a href="index.html">Home Studio</a></h1>
+        <button class="hamburger-menu"
+        aria-label="abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        >&#9776;</button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulo-grabacion.html">Grabación</a></li>
+            <li><a href="articulo-produccion.html">Producción</a></li>
+            <li><a href="articulo-monitorizacion.html">Monitorización</a></li>
+            <li><a href="data.html" class="estado-activo">Sugerencias</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main >
+    <section class="estilo-borde contenido-form">
+      <h2>Agregar Sugerencias</h2>
+      <form id="data-form">
+        <label for="item-name">Nombre del Equipo</label>
+        <input type="text" id="item-name" placeholder="Ej. Shure SM57" required>
+
+        <label for="item-type">Tipo</label>
+        <input type="text" id="item-type" placeholder="Ej. Dinámico" required>
+
+        <label for="item-value">Precio</label>
+        <input type="number" id="item-value" placeholder="Ej. $25" required>
+
+        <button type="submit" id="add-item-btn" class="add-btn">Cargar</button>
+        <button type="submit" id="update-item-btn" class="update-btn">Actualizar</button>
+        <button type="reset" class="cancel-btn">Cancelar</button>
+      </form>
+      <div id="status-message" class="hidden">Mensaje a mostrar</div>
+    </section>
+    <section class="estilo-borde contenido-tabla">
+      <h2>Sugerencias</h2>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Equipo</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </section>
+    </main>
+    <footer>
+    <div>
+        <p><a href="index.html"><strong>Volver al inicio &gt;</strong></a></p>
+        <p>&copy; 2026 Home Studio. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+        <h3>¿Está seguro de que desea eliminar este elemento?</h3>
+        <div class="modal-buttons">
+            <button class="confirm-btn">Sí, eliminar</button>
+            <button class="cancel-btn">Cancelar</button>
+        </div>
+        </div>
+    </div>  
+    <script src="js/base.js"></script>
+    <script src="js/data.js"></script>
+  </body>
+</html>
